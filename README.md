@@ -2,6 +2,8 @@
 
 全画面のブラウザ
 
+SwiftUIのみ
+
 ## このブラウザには以下の機能はありません
 
 タブ
@@ -19,3 +21,5 @@ iCloud同期
 SplitView SlideOver
 
 ダークモードのサポート
+
+iOS iPadOS　(MacOS)　のサポート
