@@ -1,12 +1,16 @@
 # FullBrowser
 
-全画面のブラウザ
+FullScreenBrowser
 
 SwiftUIのみ
 
 ## このブラウザには以下の機能はありません
 
 タブ
+
+進む・戻る
+
+サイトの共有
 
 ブックマーク
 
