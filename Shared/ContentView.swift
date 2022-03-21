@@ -14,7 +14,6 @@ struct ContentView: View {
     @Environment(\.presentationMode) var presentation
 
     
-    
     var body: some View {
         NavigationView{
             VStack{
