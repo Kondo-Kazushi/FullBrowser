@@ -9,33 +9,51 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var theURL = "https://"
+    @State var theURL = "https://www.jw.org/ja"
+    @State private var showingModal = false
+    @Environment(\.presentationMode) var presentation
+
+    
     
     var body: some View {
         NavigationView{
             VStack{
                 TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $theURL)
+                    .font(.title)
                     .keyboardType(.URL)
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                NavigationLink("Open", destination: WebpageView(loadUrl: theURL)
-                    .edgesIgnoringSafeArea(.all)
-                    .navigationBarTitle("")
-                    .navigationBarHidden(true)
-                )
-                
+                HStack{
+                    Spacer()
+                    NavigationLink(destination:
+                                    ZStack{
+                        WebView(theURL1: $theURL)
+                        
+                    }
+                        .edgesIgnoringSafeArea(.all)
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
+                    )
+                    {
+                        Text("開く").font(.title)
+                            .bold()
+                    }.frame(alignment: .center)
+                    Spacer()
+                    Button(action: {
+                        self.showingModal.toggle()
+                    }) {
+                        Image(systemName: "questionmark.circle").font(.title)
+                    }.sheet(isPresented: $showingModal) {
+                        about()
+                    }.frame(alignment: .trailing)
+                }
             }.padding()
         }.navigationViewStyle(StackNavigationViewStyle())
-        
-        
-        
-        
-        
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

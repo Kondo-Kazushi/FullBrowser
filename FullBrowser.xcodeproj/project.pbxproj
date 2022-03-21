@@ -15,6 +15,10 @@
 		E448B2C527E72D4A008B1403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E448B2B227E72D4A008B1403 /* Assets.xcassets */; };
 		E448B2CF27E72D66008B1403 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448B2CE27E72D66008B1403 /* Web.swift */; };
 		E448B2D027E72D66008B1403 /* Web.swift in Sources */ = {isa = PBXBuildFile; fileRef = E448B2CE27E72D66008B1403 /* Web.swift */; };
+		E4D2195F27E87CB300EFE1A6 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2195E27E87CB300EFE1A6 /* about.swift */; };
+		E4D2196027E87CB300EFE1A6 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2195E27E87CB300EFE1A6 /* about.swift */; };
+		E4D2196227E8925200EFE1A6 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2196127E8925200EFE1A6 /* WebView.swift */; };
+		E4D2196327E8925200EFE1A6 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2196127E8925200EFE1A6 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +29,8 @@
 		E448B2BD27E72D4A008B1403 /* FullBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FullBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E448B2BF27E72D4A008B1403 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		E448B2CE27E72D66008B1403 /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
+		E4D2195E27E87CB300EFE1A6 /* about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
+		E4D2196127E8925200EFE1A6 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,9 @@
 			children = (
 				E448B2B027E72D49008B1403 /* FullBrowserApp.swift */,
 				E448B2B127E72D49008B1403 /* ContentView.swift */,
+				E4D2195E27E87CB300EFE1A6 /* about.swift */,
 				E448B2CE27E72D66008B1403 /* Web.swift */,
+				E4D2196127E8925200EFE1A6 /* WebView.swift */,
 				E448B2B227E72D4A008B1403 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -181,8 +189,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E448B2CF27E72D66008B1403 /* Web.swift in Sources */,
+				E4D2196227E8925200EFE1A6 /* WebView.swift in Sources */,
 				E448B2C227E72D4A008B1403 /* ContentView.swift in Sources */,
 				E448B2C027E72D4A008B1403 /* FullBrowserApp.swift in Sources */,
+				E4D2195F27E87CB300EFE1A6 /* about.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,8 +201,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E448B2D027E72D66008B1403 /* Web.swift in Sources */,
+				E4D2196327E8925200EFE1A6 /* WebView.swift in Sources */,
 				E448B2C327E72D4A008B1403 /* ContentView.swift in Sources */,
 				E448B2C127E72D4A008B1403 /* FullBrowserApp.swift in Sources */,
+				E4D2196027E87CB300EFE1A6 /* about.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
