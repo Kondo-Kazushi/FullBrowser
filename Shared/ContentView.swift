@@ -9,26 +9,35 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var theURL = "https://www.jw.org/ja"
+    @State var theURL = "https://"
     @State private var showingModal = false
+    @State private var showingModal2 = false
     @Environment(\.presentationMode) var presentation
-
+    @Environment(\.presentationMode) var presentation2
+    @AppStorage("name") var name: String = "user"
+    
     
     var body: some View {
         NavigationView{
             VStack{
-                TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $theURL)
+                Text("\(name)さん、ようこそ").padding()
+                TextField("URL", text: $theURL)
                     .font(.title)
                     .keyboardType(.URL)
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 HStack{
+                    Button(action: {
+                        self.showingModal.toggle()
+                    }) {
+                        Image(systemName: "gear.circle").font(.title)
+                    }.sheet(isPresented: $showingModal) {
+                        settings()
+                    }.frame(alignment: .trailing)
+                    
                     Spacer()
                     NavigationLink(destination:
-                                    ZStack{
-                        WebView(theURL1: $theURL)
-                        
-                    }
+                                    WebView(theURL1: $theURL)
                         .edgesIgnoringSafeArea(.all)
                         .navigationBarTitle("")
                         .navigationBarHidden(true)
@@ -38,11 +47,12 @@ struct ContentView: View {
                             .bold()
                     }.frame(alignment: .center)
                     Spacer()
+                    
                     Button(action: {
-                        self.showingModal.toggle()
+                        self.showingModal2.toggle()
                     }) {
                         Image(systemName: "questionmark.circle").font(.title)
-                    }.sheet(isPresented: $showingModal) {
+                    }.sheet(isPresented: $showingModal2) {
                         about()
                     }.frame(alignment: .trailing)
                 }

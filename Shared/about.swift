@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct about: View {
-    @Environment(\.presentationMode) private var presentationMode
-    @Environment(\.presentationMode) var presentation
-    @State var theURL = "https://github.com/Kondo-Kazushi/FullBrowser"
-
+    @Environment(\.presentationMode) private var presentationMode2
+    @Environment(\.presentationMode) var presentation2
+    @State var theURL = ""
+    
     
     let url = "https://github.com/Kondo-Kazushi/FullBrowser"
-
+    
     
     var body: some View {
         NavigationView{
@@ -34,9 +34,13 @@ struct about: View {
                     }.padding()
                 }
                 Button("閉じる") {
-                    presentationMode.wrappedValue.dismiss()
-                }.padding()
-            }
+                    presentationMode2.wrappedValue.dismiss()
+                }
+                .padding()
+                .foregroundColor(Color.white)
+                .background(Color.blue)
+                .cornerRadius(25)
+            }.padding()
         }
     }
     

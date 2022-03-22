@@ -23,6 +23,9 @@ struct WebView: View {
                     .background(Color.blue)
                     .cornerRadius(25)
             }).padding()
+            Spacer()
+            
+            
         }
     }
 }

@@ -19,6 +19,8 @@
 		E4D2196027E87CB300EFE1A6 /* about.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2195E27E87CB300EFE1A6 /* about.swift */; };
 		E4D2196227E8925200EFE1A6 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2196127E8925200EFE1A6 /* WebView.swift */; };
 		E4D2196327E8925200EFE1A6 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2196127E8925200EFE1A6 /* WebView.swift */; };
+		E4D2196527EA060C00EFE1A6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2196427EA060C00EFE1A6 /* Settings.swift */; };
+		E4D2196627EA060C00EFE1A6 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D2196427EA060C00EFE1A6 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		E448B2CE27E72D66008B1403 /* Web.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Web.swift; sourceTree = "<group>"; };
 		E4D2195E27E87CB300EFE1A6 /* about.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = about.swift; sourceTree = "<group>"; };
 		E4D2196127E8925200EFE1A6 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		E4D2196427EA060C00EFE1A6 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 				E448B2B027E72D49008B1403 /* FullBrowserApp.swift */,
 				E448B2B127E72D49008B1403 /* ContentView.swift */,
 				E4D2195E27E87CB300EFE1A6 /* about.swift */,
+				E4D2196427EA060C00EFE1A6 /* Settings.swift */,
 				E448B2CE27E72D66008B1403 /* Web.swift */,
 				E4D2196127E8925200EFE1A6 /* WebView.swift */,
 				E448B2B227E72D4A008B1403 /* Assets.xcassets */,
@@ -188,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D2196527EA060C00EFE1A6 /* Settings.swift in Sources */,
 				E448B2CF27E72D66008B1403 /* Web.swift in Sources */,
 				E4D2196227E8925200EFE1A6 /* WebView.swift in Sources */,
 				E448B2C227E72D4A008B1403 /* ContentView.swift in Sources */,
@@ -200,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D2196627EA060C00EFE1A6 /* Settings.swift in Sources */,
 				E448B2D027E72D66008B1403 /* Web.swift in Sources */,
 				E4D2196327E8925200EFE1A6 /* WebView.swift in Sources */,
 				E448B2C327E72D4A008B1403 /* ContentView.swift in Sources */,
@@ -325,6 +331,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FZV4U8KNW7;
@@ -355,6 +362,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FZV4U8KNW7;
