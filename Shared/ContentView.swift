@@ -15,12 +15,28 @@ struct ContentView: View {
     @Environment(\.presentationMode) var presentation
     @Environment(\.presentationMode) var presentation2
     @AppStorage("name") var name: String = "user"
+    @AppStorage("version") var version: String = "1.1.0"
+    var open = "開く"
+    @State private var error = false
     
     
     var body: some View {
         NavigationView{
             VStack{
                 Text("\(name)さん、ようこそ").padding()
+                if theURL.contains("http://") {
+                    
+                }else if theURL.contains("https://") {
+                    
+                }else {
+                    Alert2(theURL1: $theURL)
+                    
+                    
+                }
+                
+                if theURL.contains("apple.com") {
+                    Alert(theURL1: $theURL)
+                }
                 TextField("URL", text: $theURL)
                     .font(.title)
                     .keyboardType(.URL)
@@ -43,7 +59,7 @@ struct ContentView: View {
                         .navigationBarHidden(true)
                     )
                     {
-                        Text("開く").font(.title)
+                        Text("\(open)").font(.title)
                             .bold()
                     }.frame(alignment: .center)
                     Spacer()

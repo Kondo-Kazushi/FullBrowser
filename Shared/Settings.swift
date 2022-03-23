@@ -12,6 +12,7 @@ struct settings: View {
     @Environment(\.presentationMode) var presentation
     @State var theURL = ""
     @AppStorage("name") var name: String = "user"
+    @AppStorage("version") var version: String = "1.1.0"
 
     
     
@@ -24,6 +25,9 @@ struct settings: View {
                 Form{
                     Section("プロフィール"){
                         TextField("ニックネーム", text: $name)
+                    }
+                    Section("Versionを偽装する"){
+                        TextField("希望するバージョン", text: $version)
                     }
                 }
                 Button("Done") {

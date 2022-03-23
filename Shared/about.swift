@@ -10,11 +10,9 @@ import SwiftUI
 struct about: View {
     @Environment(\.presentationMode) private var presentationMode2
     @Environment(\.presentationMode) var presentation2
-    @State var theURL = ""
-    
-    
-    let url = "https://github.com/Kondo-Kazushi/FullBrowser"
-    
+    @State var theURL = "https://github.com/Kondo-Kazushi/FullBrowser"
+    @AppStorage("version") var version: String = "1.1.0"
+
     
     var body: some View {
         NavigationView{
@@ -33,6 +31,7 @@ struct about: View {
                         
                     }.padding()
                 }
+                Text("Version \(version)")
                 Button("閉じる") {
                     presentationMode2.wrappedValue.dismiss()
                 }
