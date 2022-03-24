@@ -13,6 +13,7 @@ struct settings: View {
     @State var theURL = ""
     @AppStorage("name") var name: String = "user"
     @AppStorage("version") var version: String = "1.1.0"
+    @AppStorage("showname") var showname = true
 
     
     
@@ -23,13 +24,24 @@ struct settings: View {
         
             VStack{
                 Form{
-                    Section("プロフィール"){
+                    Section(){
                         TextField("ニックネーム", text: $name)
+                        Toggle(isOn: $showname) {
+                            Text("ホームにニックネームを表示する")
+                        }
+                    } header: {
+                        Text("プロフィール")
+                    } footer: {
+                        Text("iPhoneのランドスケープモードではオフにすることをおすすめします")
                     }
-                    Section("Versionを偽装する"){
+                    Section(){
                         TextField("希望するバージョン", text: $version)
+                    } header: {
+                        Text("Versionを偽装する")
+                    } footer: {
+                        Text("Versionを偽装しても以前の仕様には戻りません")
                     }
-                }
+                }.cornerRadius(15)
                 Button("Done") {
                     presentationMode.wrappedValue.dismiss()
                 }

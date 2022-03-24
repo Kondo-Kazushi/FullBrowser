@@ -18,27 +18,50 @@ struct ContentView: View {
     @AppStorage("version") var version: String = "1.1.0"
     var open = "開く"
     @State private var error = false
+    @AppStorage("showname") var showname = true
     
     
     var body: some View {
         NavigationView{
             VStack{
-                Text("\(name)さん、ようこそ").padding()
-                if theURL.contains("http://") {
-                    
-                }else if theURL.contains("https://") {
-                    
-                }else {
-                    Alert2(theURL1: $theURL)
-                    
-                    
+                ScrollView{
+                    if showname == true {
+                        Text("\(name)").padding()
+                            .font(.title2)
+                    }
+                    VStack{
+                        if theURL.contains(".") {
+                            
+                        }else {
+                            Alert3()
+                        }
+                        
+                        if theURL.contains("http://") {
+                            if theURL.contains("."){
+                                Alert5(theURL1: $theURL)
+                            }
+                        }else if theURL.contains("https://") {
+                            
+                        }else {
+                            Alert2()
+                        }
+                        
+                        if theURL.contains("apple.com") {
+                            Alert(theURL1: $theURL)
+                        }
+                        
+                        if theURL.contains("jw.org") {
+                            Alert6()
+                        }
+                        
+                        if theURL.contains("myna.go.jp") {
+                            Alert7()
+                        }
+                    }
                 }
-                
-                if theURL.contains("apple.com") {
-                    Alert(theURL1: $theURL)
-                }
+                Spacer()
                 TextField("URL", text: $theURL)
-                    .font(.title)
+                    .font(.title2)
                     .keyboardType(.URL)
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -46,7 +69,7 @@ struct ContentView: View {
                     Button(action: {
                         self.showingModal.toggle()
                     }) {
-                        Image(systemName: "gear.circle").font(.title)
+                        Image(systemName: "gear.circle").font(.title2)
                     }.sheet(isPresented: $showingModal) {
                         settings()
                     }.frame(alignment: .trailing)
@@ -59,19 +82,20 @@ struct ContentView: View {
                         .navigationBarHidden(true)
                     )
                     {
-                        Text("\(open)").font(.title)
+                        Text("\(open)").font(.title2)
                             .bold()
                     }.frame(alignment: .center)
                     Spacer()
-                    
                     Button(action: {
                         self.showingModal2.toggle()
                     }) {
-                        Image(systemName: "questionmark.circle").font(.title)
+                        Image(systemName: "questionmark.circle").font(.title2)
                     }.sheet(isPresented: $showingModal2) {
                         about()
                     }.frame(alignment: .trailing)
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
             }.padding()
         }.navigationViewStyle(StackNavigationViewStyle())
     }
